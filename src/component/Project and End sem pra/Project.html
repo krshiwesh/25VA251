@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FitX - Fitness Platform</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:100;
+    background:rgba(0,0,0,0.8);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+}
+
+.logo{
+    font-size:2rem;
+    font-weight:700;
+}
+
+.logo span{
+    color:#ff4d4d;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ff4d4d;
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 10%;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1517838277536-f5f99be501cd?auto=format&fit=crop&w=1500&q=80");
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-content span{
+    color:#ff4d4d;
+}
+
+.hero-content p{
+    max-width:700px;
+    margin:auto;
+    color:#ccc;
+    line-height:1.7;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:14px 35px;
+    background:#ff4d4d;
+    color:white;
+    border:none;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:1rem;
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.stats{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    flex-wrap:wrap;
+    padding:60px 10%;
+    background:#151515;
+}
+
+.stat{
+    text-align:center;
+}
+
+.stat h2{
+    color:#ff4d4d;
+    font-size:2.5rem;
+}
+
+.section-title{
+    text-align:center;
+    margin:70px 0 40px;
+    font-size:2.5rem;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    padding:0 8% 80px;
+}
+
+.card{
+    background:#181818;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#ff4d4d;
+}
+
+.pricing{
+    display:flex;
+    gap:30px;
+    justify-content:center;
+    flex-wrap:wrap;
+    padding-bottom:80px;
+}
+
+.plan{
+    width:300px;
+    background:#181818;
+    padding:30px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.plan h2{
+    color:#ff4d4d;
+}
+
+.price{
+    font-size:2rem;
+    margin:20px 0;
+}
+
+footer{
+    background:#000;
+    text-align:center;
+    padding:25px;
+}
+
+#msg{
+    margin-top:20px;
+    color:#00ff88;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">Fit<span>X</span></div>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Programs</a>
+        <a href="#">Membership</a>
+        <a href="#">Trainers</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-content">
+        <h1>Become The <span>Strongest</span> Version Of Yourself</h1>
+
+        <p>
+            Join thousands of fitness enthusiasts and access
+            world-class workouts, yoga sessions, personal
+            coaching and nutrition plans.
+        </p>
+
+        <button class="btn" onclick="joinNow()">
+            Start Free Trial
+        </button>
+
+        <h3 id="msg"></h3>
+    </div>
+</section>
+
+<section class="stats">
+    <div class="stat">
+        <h2>50K+</h2>
+        <p>Members</p>
+    </div>
+
+    <div class="stat">
+        <h2>300+</h2>
+        <p>Expert Trainers</p>
+    </div>
+
+    <div class="stat">
+        <h2>120+</h2>
+        <p>Fitness Centers</p>
+    </div>
+
+    <div class="stat">
+        <h2>4.9★</h2>
+        <p>User Rating</p>
+    </div>
+</section>
+
+<h2 class="section-title">Popular Programs</h2>
+
+<section class="cards">
+    <div class="card">
+        <h3>Strength Training</h3>
+        <p>Build muscle and increase overall strength.</p>
+    </div>
+
+    <div class="card">
+        <h3>Yoga & Meditation</h3>
+        <p>Improve flexibility and mental wellness.</p>
+    </div>
+
+    <div class="card">
+        <h3>HIIT Cardio</h3>
+        <p>Burn calories faster with intense workouts.</p>
+    </div>
+
+    <div class="card">
+        <h3>Nutrition Plans</h3>
+        <p>Personalized diet plans for your goals.</p>
+    </div>
+</section>
+
+<h2 class="section-title">Membership Plans</h2>
+
+<section class="pricing">
+    <div class="plan">
+        <h2>Basic</h2>
+        <div class="price">₹499/mo</div>
+        <p>Workout Access</p>
+        <p>Mobile App</p>
+        <button class="btn">Choose</button>
+    </div>
+
+    <div class="plan">
+        <h2>Pro</h2>
+        <div class="price">₹999/mo</div>
+        <p>Everything in Basic</p>
+        <p>Nutrition Support</p>
+        <p>Live Classes</p>
+        <button class="btn">Choose</button>
+    </div>
+
+    <div class="plan">
+        <h2>Elite</h2>
+        <div class="price">₹1499/mo</div>
+        <p>Personal Trainer</p>
+        <p>Custom Plans</p>
+        <p>Priority Support</p>
+        <button class="btn">Choose</button>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 FitX Fitness Platform</p>
+</footer>
+
+<script>
+function joinNow(){
+    document.getElementById("msg").innerHTML =
+    "🔥 Congratulations! Your Free Trial has been activated.";
+}
+</script>
+
+</body>
+</html>
